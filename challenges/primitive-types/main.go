@@ -13,6 +13,10 @@ func main() {
 	// get global var
 	fmt.Printf("Global val: %v\n", getGlobalVal())
 
+	// update global var and print it
+	updateGlobalVal("updated global var")
+	fmt.Printf("Updated Global val: %v\n", getGlobalVal())
+	
 	// create pointer to local var
 	var pVal *int = &val
 
@@ -28,4 +32,8 @@ func main() {
 
 func getGlobalVal() string {
 	return val
+}
+
+func updateGlobalVal(newVal string) {
+	val = newVal
 }
