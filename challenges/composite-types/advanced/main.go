@@ -23,11 +23,10 @@ func (lib *library) AddBook(b book) {
 
 func (lib library) LookupByAuthorName(author string) (books []book) {
 	for _, b := range lib.books { 
-        if(b.author.name == author) {
+        	if(b.author.name == author) {
 			books = append(books, b)
 		} 
-    } 
-
+    	}
 	return
 }
 
